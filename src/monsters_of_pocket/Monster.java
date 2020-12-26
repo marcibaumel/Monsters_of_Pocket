@@ -20,7 +20,7 @@ public class Monster extends Game {
 	@Override
 	public void render() {
 		Gdx.gl.glClearColor(0f, 2f, 0f, 1f);
-		Gdx.gl20.glClear(GL20.GL_COLOR_BUFFER_BIT);
+		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		super.render();
 	}
 	
