@@ -102,6 +102,14 @@ public class Actor {
 	
 	private void finishMove() {
 		state=ACTOR_STATE.STANDING;
+		
+		this.srcX=0;
+		this.srcY=0;
+		this.desX=0;
+		this.desY=0;
+		this.worldX=desX;
+		this.worldY=desY;
+		
 	}
 	
 	

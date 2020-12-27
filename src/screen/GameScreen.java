@@ -27,7 +27,7 @@ public class GameScreen extends AbstractScreen {
 		
 		super(app);
 		
-		playerFrontTexture = new Texture("res/Characters/Cony/front.png");
+		playerFrontTexture = new Texture("res/Characters/Cony/front_1.png");
 		grass1=new Texture("res/Map/grass1.png");
 		grass2=new Texture("res/Map/grass2.png");
 		camera=new Camera();
