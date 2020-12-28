@@ -4,9 +4,12 @@ import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputAdapter;
 
 import model.Actor;
+import model.DIRECTION;
 
 public class PlayerController extends InputAdapter {
 
+	private boolean up, down, left, right;
+	
 	private Actor player;
 	
 	public PlayerController(Actor p) {
@@ -16,19 +19,54 @@ public class PlayerController extends InputAdapter {
 	@Override
 	public boolean keyDown(int keycode) {
 		if(keycode == Keys.UP) {
-			player.move(0, 1);
+			up=true;
 		}
 		if(keycode == Keys.DOWN) {
-			player.move(0, -1);
+			down=true;
 		}
 		if(keycode == Keys.LEFT) {
-			player.move(-1, 0);
+			left=true;
 		}
 		if(keycode == Keys.RIGHT) {
-			player.move(1, 0);
+			right=true;
 		}
-
-		
 		return false;
 	}
+	
+	@Override
+	public boolean keyUp(int keycode) {
+		if(keycode == Keys.UP) {
+			up=false;
+		}
+		if(keycode == Keys.DOWN) {
+			down=false;
+		}
+		if(keycode == Keys.LEFT) {
+			left=false;
+		}
+		if(keycode == Keys.RIGHT) {
+			right=false;
+		}
+		return false;
+	}
+	
+	public void update(float delta) {
+		if(up) {
+			player.move(DIRECTION.UP);
+			return;
+		}
+		if(down) {
+			player.move(DIRECTION.DOWN);
+			return;
+		}
+		if(left) {
+			player.move(DIRECTION.LEFT);
+			return;
+		}
+		if(right) {
+			player.move(DIRECTION.RIGHT);
+			return;
+		}
+	}
+	
 }

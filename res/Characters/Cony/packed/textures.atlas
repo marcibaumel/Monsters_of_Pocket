@@ -4,112 +4,140 @@ size: 512,64
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
-back
+back_stand
   rotate: false
-  xy: 2, 2
-  size: 27, 48
-  orig: 27, 48
+  xy: 256, 8
+  size: 29, 42
+  orig: 29, 42
   offset: 0, 0
-  index: 4
-back
-  rotate: false
-  xy: 31, 5
-  size: 28, 45
-  orig: 28, 45
-  offset: 0, 0
-  index: 3
-back
+  index: -1
+back_walk
   rotate: false
   xy: 256, 8
   size: 29, 42
   orig: 29, 42
   offset: 0, 0
   index: 1
-back
+back_walk
+  rotate: false
+  xy: 2, 2
+  size: 27, 48
+  orig: 27, 48
+  offset: 0, 0
+  index: 4
+back_walk
+  rotate: false
+  xy: 31, 5
+  size: 28, 45
+  orig: 28, 45
+  offset: 0, 0
+  index: 3
+back_walk
   rotate: false
   xy: 380, 8
   size: 27, 42
   orig: 27, 42
   offset: 0, 0
   index: 2
-front
+front_stand
   rotate: false
-  xy: 125, 7
-  size: 29, 43
-  orig: 29, 43
+  xy: 440, 13
+  size: 29, 37
+  orig: 29, 37
   offset: 0, 0
-  index: 3
-front
-  rotate: false
-  xy: 287, 8
-  size: 29, 42
-  orig: 29, 42
-  offset: 0, 0
-  index: 2
-front
-  rotate: false
-  xy: 318, 8
-  size: 29, 42
-  orig: 29, 42
-  offset: 0, 0
-  index: 4
-front
+  index: -1
+front_walk
   rotate: false
   xy: 440, 13
   size: 29, 37
   orig: 29, 37
   offset: 0, 0
   index: 1
-left
+front_walk
   rotate: false
-  xy: 61, 7
-  size: 30, 43
-  orig: 30, 43
+  xy: 125, 7
+  size: 29, 43
+  orig: 29, 43
+  offset: 0, 0
+  index: 3
+front_walk
+  rotate: false
+  xy: 287, 8
+  size: 29, 42
+  orig: 29, 42
   offset: 0, 0
   index: 2
-left
+front_walk
+  rotate: false
+  xy: 318, 8
+  size: 29, 42
+  orig: 29, 42
+  offset: 0, 0
+  index: 4
+left_stand
+  rotate: false
+  xy: 156, 10
+  size: 32, 40
+  orig: 32, 40
+  offset: 0, 0
+  index: -1
+left_walk
   rotate: false
   xy: 156, 10
   size: 32, 40
   orig: 32, 40
   offset: 0, 0
   index: 1
-left
+left_walk
+  rotate: false
+  xy: 61, 7
+  size: 30, 43
+  orig: 30, 43
+  offset: 0, 0
+  index: 2
+left_walk
   rotate: false
   xy: 190, 10
   size: 31, 40
   orig: 31, 40
   offset: 0, 0
   index: 4
-left
+left_walk
   rotate: false
   xy: 471, 14
   size: 30, 36
   orig: 30, 36
   offset: 0, 0
   index: 3
-right
+right_stand
   rotate: false
-  xy: 93, 7
-  size: 30, 43
-  orig: 30, 43
+  xy: 223, 11
+  size: 31, 39
+  orig: 31, 39
   offset: 0, 0
-  index: 4
-right
+  index: -1
+right_walk
   rotate: false
   xy: 223, 11
   size: 31, 39
   orig: 31, 39
   offset: 0, 0
   index: 1
-right
+right_walk
+  rotate: false
+  xy: 93, 7
+  size: 30, 43
+  orig: 30, 43
+  offset: 0, 0
+  index: 4
+right_walk
   rotate: false
   xy: 349, 8
   size: 29, 42
   orig: 29, 42
   offset: 0, 0
   index: 2
-right
+right_walk
   rotate: false
   xy: 409, 11
   size: 29, 39
