@@ -26,16 +26,16 @@ public class AnimationSet {
 			TextureRegion standRight) {
 		
 		walking= new HashMap<DIRECTION, Animation>();
-		walking.put(DIRECTION.UP, walkUp);
-		walking.put(DIRECTION.DOWN, walkDown);
-		walking.put(DIRECTION.LEFT, walkLeft);
-		walking.put(DIRECTION.RIGHT, walkRight);
+		walking.put(DIRECTION.NORTH, walkUp);
+		walking.put(DIRECTION.SOUTH, walkDown);
+		walking.put(DIRECTION.WEST, walkLeft);
+		walking.put(DIRECTION.EAST, walkRight);
 		
 		standing= new HashMap<DIRECTION, TextureRegion>();
-		standing.put(DIRECTION.UP, standUp);
-		standing.put(DIRECTION.DOWN, standDown);
-		standing.put(DIRECTION.LEFT, standLeft);
-		standing.put(DIRECTION.RIGHT, standRight);
+		standing.put(DIRECTION.NORTH, standUp);
+		standing.put(DIRECTION.SOUTH, standDown);
+		standing.put(DIRECTION.WEST, standLeft);
+		standing.put(DIRECTION.EAST, standRight);
 		
 	}
 	

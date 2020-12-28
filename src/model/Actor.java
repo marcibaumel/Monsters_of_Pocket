@@ -34,7 +34,7 @@ public class Actor {
 		this.worldX=x;
 		this.worldY=y;
 		this.animations=animations;
-		this.facing=DIRECTION.DOWN;
+		this.facing=DIRECTION.SOUTH;
 		map.getTile(x, y).setActor(this);
 		this.state=ACTOR_STATE.STANDING;
 	}
@@ -91,7 +91,7 @@ public class Actor {
 		else if(state == ACTOR_STATE.STANDING) {
 			return animations.getStanding(facing);
 		}
-		return animations.getStanding(DIRECTION.UP);
+		return animations.getStanding(DIRECTION.NORTH);
 	}
 
 	/*
