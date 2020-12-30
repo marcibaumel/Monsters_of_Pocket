@@ -1,7 +1,5 @@
 package model;
 
-import com.badlogic.gdx.graphics.g3d.particles.influencers.ColorInfluencer.Random;
-
 public class TileMap {
 
 	private int width,height;

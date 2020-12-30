@@ -8,18 +8,18 @@ public enum DIRECTION {
 	WEST(-1,0),
 	;
 	
-	private int cx, cy;
+	private int dx, dy;
 	
-	private DIRECTION(int cx, int cy) {
-		this.cx=cy;
-		this.cy=cy;
+	private DIRECTION(int dx, int dy) {
+		this.dx=dx;
+		this.dy=dy;
 	}
 	
-	public int getCX() {
-		return cx;
+	public int getDX() {
+		return dx;
 	}
 	
-	public int getCY() {
-		return cy;
+	public int getDY() {
+		return dy;
 	}
 }

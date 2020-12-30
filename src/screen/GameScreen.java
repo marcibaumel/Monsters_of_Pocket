@@ -33,29 +33,29 @@ public class GameScreen extends AbstractScreen {
 		
 		super(app);
 		
-		playerFrontTexture = new Texture("res/Characters/Cony/unpacked/front_stand.png");
+		playerFrontTexture = new Texture("res/Characters/Cony/unpacked/brendan_stand_north.png");
 		grass1=new Texture("res/Map/grass1.png");
-		grass2=new Texture("res/Map/grass2.png");
+		grass2=new Texture("res/Map/grass1.png");
 		camera=new Camera();
 		
 		batch = new SpriteBatch();
 		
 		TextureAtlas atlas =app.getAssetManager().get("res/Characters/Cony/packed/textures.atlas", TextureAtlas.class);
 		
-		AnimationSet animations = new AnimationSet(
-				new Animation(0.3f/2f, atlas.findRegions("front_walk"), PlayMode.LOOP_PINGPONG),
-				new Animation(0.3f/2f, atlas.findRegions("back_walk"), PlayMode.LOOP_PINGPONG),
-				new Animation(0.3f/2f, atlas.findRegions("left_walk"), PlayMode.LOOP_PINGPONG),
-				new Animation(0.3f/2f, atlas.findRegions("right_walk"), PlayMode.LOOP_PINGPONG),
-				atlas.findRegion("front_stand"),
-				atlas.findRegion("back_stand"),
-				atlas.findRegion("left_stand"),
-				atlas.findRegion("right_stand")
+		AnimationSet animation = new AnimationSet(
+				new Animation(0.4f/2f, atlas.findRegions("brendan_walk_north"), PlayMode.LOOP_PINGPONG),
+				new Animation(0.4f/2f, atlas.findRegions("brendan_walk_south"), PlayMode.LOOP_PINGPONG),
+				new Animation(0.4f/2f, atlas.findRegions("brendan_walk_west"), PlayMode.LOOP_PINGPONG),
+				new Animation(0.4f/2f, atlas.findRegions("brendan_walk_east"), PlayMode.LOOP_PINGPONG),
+				atlas.findRegion("brendan_stand_north"),
+				atlas.findRegion("brendan_stand_south"),
+				atlas.findRegion("brendan_stand_west"),
+				atlas.findRegion("brendan_stand_east")
 				);
 				
 		
 		map=new TileMap(10,10);
-		player =new Actor(map, 0, 0, animations);
+		player =new Actor(map, 0, 0, animation);
 		
 		
 		controller = new PlayerController(player);

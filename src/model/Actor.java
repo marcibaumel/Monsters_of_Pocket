@@ -11,13 +11,13 @@ public class Actor {
 	private int x;
 	private int y;
 	private DIRECTION facing;
-	private AnimationSet animations;
+	private AnimationSet animation;
 	private float worldX, worldY;
 	
 	private int srcX, srcY;
 	private int desX, desY;
 	private float animTimer;
-	private float ANIM_TIME= 0.5f;
+	private float ANIM_TIME= 0.3f;
 	
 	private float walkTimer;
 	private boolean moveRequestThisFrame;
@@ -33,7 +33,7 @@ public class Actor {
 		this.y = y;
 		this.worldX=x;
 		this.worldY=y;
-		this.animations=animations;
+		this.animation=animations;
 		this.facing=DIRECTION.SOUTH;
 		map.getTile(x, y).setActor(this);
 		this.state=ACTOR_STATE.STANDING;
@@ -86,12 +86,12 @@ public class Actor {
 	
 	public TextureRegion getSprite() {
 		if(state==ACTOR_STATE.WALKING ) {
-			return animations.getWalking(facing).getKeyFrame(walkTimer);
+			return animation.getWalking(facing).getKeyFrame(walkTimer);
 		}
 		else if(state == ACTOR_STATE.STANDING) {
-			return animations.getStanding(facing);
+			return animation.getStanding(facing);
 		}
-		return animations.getStanding(DIRECTION.NORTH);
+		return animation.getStanding(DIRECTION.SOUTH);
 	}
 
 	/*
@@ -106,21 +106,22 @@ public class Actor {
 			return false;
 		}
 		
-		if(x+dir.getCX()>=map.getWidth() || x+dir.getCX()<0 || y+dir.getCY()>=map.getHeight()|| y+dir.getCY()<0) {
+		
+		if(x+dir.getDX()>=map.getWidth() || x+dir.getDX()<0 || y+dir.getDY()>=map.getHeight()|| y+dir.getDY()<0) {
 			return false;
 		}
 		
-		if(map.getTile(x+dir.getCX(), y+dir.getCY()).getActor()!=null ){
+		if(map.getTile(x+dir.getDX(), y+dir.getDY()).getActor() !=null ){
 			return false;
 		}
+		
 		
 		initializeMove(dir);
 		map.getTile(x, y).setActor(null);
-		
-		x+=dir.getCX();
-		y+=dir.getCY();
-		
+		x+=dir.getDX();
+		y+=dir.getDY();
 		map.getTile(x, y).setActor(this);
+		
 		return true;
 	}
 	
@@ -128,8 +129,8 @@ public class Actor {
 		this.facing=dir;
 		this.srcX=x;
 		this.srcY=y;
-		this.desX=x+dir.getCX();
-		this.desY=y+dir.getCY();
+		this.desX=x+dir.getDX();
+		this.desY=y+dir.getDY();
 		this.worldX=x;
 		this.worldY=y;
 		animTimer= 0f;
